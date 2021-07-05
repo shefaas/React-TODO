@@ -1,9 +1,12 @@
 import React from 'react';
 
 export const Task = ({ tasks, setTasks, text, completed, id }) => {
-    // console.log({tasks});
+
+    console.log({tasks});
+
+
     const handleCompletion = () => {
-        // console.log("ID: ", id);
+        console.log("ID: ", id);
         setTasks(
             tasks.map(
                 (task) => {
@@ -27,7 +30,7 @@ export const Task = ({ tasks, setTasks, text, completed, id }) => {
     }
     return (
         <div className="todo">
-            <li key={id} className={`todo-item ${completed} ? "completed" : ""`}>{text}</li>
+            <li className={`todo-item ${completed? "completed" : ""}`}>{text}</li>
             <button 
                 onClick={handleCompletion}
                 className="complete-btn">

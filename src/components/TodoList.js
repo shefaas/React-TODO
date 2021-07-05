@@ -10,6 +10,7 @@ export const TodoList = ( { tasks, setTasks } ) => {
                     (task) => {
                         return (
                             <Task
+                                key={task.id}
                                 tasks={tasks}
                                 setTasks={setTasks}
                                 text={task.text}

@@ -1,16 +1,18 @@
 import React from 'react';
 
 export const Task = ({ tasks, setTasks, text, completed, id }) => {
+    // console.log({tasks});
     const handleCompletion = () => {
+        // console.log("ID: ", id);
         setTasks(
             tasks.map(
                 (task) => {
                     if (task.id === id) {
                         return {
-                            ...tasks, completed: true
+                            ...task, completed: true
                         }
                     }
-                    return tasks;
+                    return task;
                 }
             )
         )

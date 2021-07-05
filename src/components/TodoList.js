@@ -13,7 +13,7 @@ export const TodoList = ( { tasks, setTasks } ) => {
                                 tasks={tasks}
                                 setTasks={setTasks}
                                 text={task.text}
-                                complete={task.complete}
+                                completed={task.completed}
                                 id={task.id} />
                         )}
                 )}

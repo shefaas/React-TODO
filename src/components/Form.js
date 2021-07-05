@@ -11,7 +11,7 @@ export const Form = ({ setInput, setTasks, input, tasks }) => {
         event.preventDefault();
         setTasks(
             (tasks) => {
-                return [...tasks, {text: input, completed: false}];
+                return [...tasks, {text: input, completed: false, id: Date.now()}];
             }
         )
         setInput("");
@@ -30,7 +30,7 @@ export const Form = ({ setInput, setTasks, input, tasks }) => {
                 type="submit"
                 className="todo-button" >
                     <i className="fas fa-plus-square" />
-            </button>
+              </button>
             <div className="select">
                 <select name="todos" className="filter-todo">
                     <option value="all" >All</option>

@@ -2,20 +2,22 @@ import React from 'react';
 
 export const Form = ({ setInput, setTasks, input, tasks }) => {
     const handleTask = (event) => {
-        console.log(event);
+        // console.log(event);
         const text = event.target.value;
         setInput(text);
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setTasks(
-            (tasks) => {
-                return [...tasks, {text: input, completed: false, id: Date.now()}];
-            }
-        )
-        setInput("");
-        console.log(tasks);
+        if (input !== "") {
+            setTasks(
+                (tasks) => {
+                    return [...tasks, {text: input, completed: false, id: Date.now()}];
+                }
+            )
+            setInput("");
+        }
+        // console.log(tasks);
     }
 
     return (

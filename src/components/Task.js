@@ -1,12 +1,9 @@
 import React from 'react';
 
 export const Task = ({ tasks, setTasks, text, completed, id }) => {
-
-    console.log({tasks});
-
-
+    // console.log({tasks});
     const handleCompletion = () => {
-        console.log("ID: ", id);
+        // console.log("ID: ", id);
         setTasks(
             tasks.map(
                 (task) => {
